@@ -61,9 +61,8 @@
 /dev/pn553                                                                  u:object_r:nfc_device:s0
 
 # OPlus touch
-/data/vendor/touch(/.*)?                                                                         u:object_r:vendor_persist_optouch_log_file:s0
+/data/vendor/touch(/.*)?                                                                         u:object_r:vendor_persist_optouch_file:s0
 /data/vendor/touchconfig(/.*)?                                                                   u:object_r:vendor_persist_optouch_file:s0
-/odm/firmware/tp/23801(/.*)?                                                                     u:object_r:hal_oplus_touch_aidl_exec:s0
 /(odm|vendor/odm)/bin/touchDaemon                                                                u:object_r:hal_oplus_touch_aidl_exec:s0
 /(odm|vendor/odm)/bin/hw/vendor-oplus-hardware-touch-V2-service                                  u:object_r:hal_oplus_touch_aidl_exec:s0
 
