@@ -19,8 +19,6 @@ allow hal_oplus_touch_aidl vendor_persist_optouch_file:dir { write add_name remo
 allow hal_oplus_touch_aidl self:capability sys_nice;
 allow hal_oplus_touch_aidl self:binder call;
 
-allow hal_oplus_touch_aidl vendor_proc_oplus_sched:file { ioctl read write getattr open };
-
 rw_dir_file(hal_oplus_touch_aidl, vendor_proc_display)
 rw_dir_file(hal_oplus_touch_aidl, vendor_persist_optouch_file)
 
