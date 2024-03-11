@@ -14,13 +14,16 @@ hal_attribute_service(vendor_hal_oplus_touch, hal_oplus_touch_aidl_service)
 allow vendor_hal_oplus_touch_client hal_oplus_touch_aidl_service:service_manager find;
 
 allow hal_oplus_touch_aidl fingerprint_device:chr_file { ioctl read write getattr open };
-allow hal_oplus_touch_aidl vendor_persist_optouch_file:file { setattr create };
+allow hal_oplus_touch_aidl vendor_proc_optouch:file { ioctl read write getattr open };
+allow hal_oplus_touch_aidl vendor_persist_optouch_file:file { setattr create unlink };
 allow hal_oplus_touch_aidl vendor_persist_optouch_file:dir { write add_name remove_name };
+allow hal_oplus_touch_aidl input_device:chr_file { ioctl read write getattr open };;
 allow hal_oplus_touch_aidl self:capability sys_nice;
 allow hal_oplus_touch_aidl self:binder call;
 
 rw_dir_file(hal_oplus_touch_aidl, vendor_proc_display)
 rw_dir_file(hal_oplus_touch_aidl, vendor_persist_optouch_file)
+rw_dir_file(hal_oplus_touch_aidl, input_device)
 
 set_prop(hal_oplus_touch_aidl, vendor_optouch_prop)
 set_prop(hal_oplus_touch_aidl, system_oplus_touch_prop)
