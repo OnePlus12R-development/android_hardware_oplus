@@ -5,5 +5,8 @@ vendor_internal_prop(system_oplus_iris_prop)
 vendor_internal_prop(system_fingerprint_prop)
 vendor_internal_prop(system_oplus_touch_prop)
 
+# Sensors
+system_public_prop(vendor_sensors_als_prop)
+
 # Version
 system_vendor_config_prop(system_oplus_project_prop)
